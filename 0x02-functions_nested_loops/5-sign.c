@@ -1,17 +1,25 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * _isalpha - checks if the character is an alphabet
- * @c: input character to be checked
+ * print_sign - will print out to sts output the sign of an interger
+ * @n: the interger to be checked
  *
- * Return: 1 if c is an alphabet else return 0
+ * Return: 1 if positive, 0 if 0 and -1 if negative
  */
-int _isalpha(int c)
+int print_sign(int n)
 {
-	if (c >= 65 && c <= 90)
+	if (n > 0)
+	{
+		_putchar('+');
 		return (1);
-	else if (c >= 97 && c <= 122)
-		return (1);
-	else
+	} else if (n == 0)
+	{
+		_putchar('0');
 		return (0);
+	} else
+	{
+		_putchar('-');
+		return (-1);
+	}
 }
